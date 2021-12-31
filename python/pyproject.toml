@@ -1,12 +1,5 @@
 [tool.black]
-line-length = 100
-target-version = ["py36"]
-
-[tool.isort]
-src_paths = [".", "tools", "tools/setup/emoji"]
-known_third_party = "zulip"
-profile = "black"
-line_length = 100
+line-length = 120
 
 [tool.mypy]
 # Logistics of what code to check and how to handle the data.
@@ -14,8 +7,8 @@ scripts_are_modules = true
 show_traceback = true
 # See https://zulip.readthedocs.io/en/latest/testing/mypy.html#mypy-stubs-for-third-party-modules
 # for notes on how we manage mypy stubs.
-mypy_path = "$MYPY_CONFIG_FILE_DIR/stubs"
-cache_dir = "$MYPY_CONFIG_FILE_DIR/var/mypy-cache"
+mypy_path = "stubs"
+cache_dir = "var/mypy-cache"
 
 # These are all the options that would be enabled by mypy --strict, in
 # the order listed by the mypy --help documentation of --strict.  We
